@@ -6,6 +6,8 @@
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "rofi -show drun"
+local browser     = "brave"
+local editor      = "code"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -18,12 +20,12 @@ hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("hyprctl dispatch exit"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.exit())
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave"))
-hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("code"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(editor))
 
 -- Focus windows with HJKL and arrow keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
@@ -47,7 +49,6 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" 
 hl.bind(mainMod .. " + SHIFT + up", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" }))
 
--- Resize windows
 -- Resize windows
 local resizeStep = 40
 
@@ -91,13 +92,13 @@ end
 -- Workspace navigation
 hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("hyprctl dispatch workspace previous_per_monitor"))
+hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "previous_per_monitor" }))
 
 -- Move current workspace to a monitor
-hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("hyprctl dispatch movecurrentworkspacetomonitor l"))
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd("hyprctl dispatch movecurrentworkspacetomonitor r"))
-hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("hyprctl dispatch movecurrentworkspacetomonitor u"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprctl dispatch movecurrentworkspacetomonitor d"))
+-- hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ monitor = "l" }))
+-- hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ monitor = "r" }))
+-- hl.bind(mainMod .. " + SHIFT + D", hl.dsp.window.move({ monitor = "u" }))
+-- hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ monitor = "d" }))
 
 -- Special workspace (scratchpad)
 hl.bind(mainMod .. " + grave", hl.dsp.workspace.toggle_special("magic"))
@@ -124,3 +125,9 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
+
+-- Screenshot an area and copy to clipboard
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | wl-copy'))
+
+-- Screenshot the entire screen and copy to clipboard
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd('grim - | wl-copy'))
