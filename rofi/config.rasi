@@ -9,7 +9,6 @@ configuration {
     drun-display-format: "{icon} {name}";
 }
 
-/* Clear default theme settings completely */
 @theme "/dev/null"
 
 /* Catppuccin Mocha Color Palette */
