@@ -68,13 +68,8 @@ hl.bind(mainMod .. " + I",
 hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + SPACE", function()
-    
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
-    
-    
     hl.dispatch(hl.dsp.window.resize({ x = 1000, y = 700, relative = false }))
-    
-    
     hl.dispatch(hl.dsp.window.center())
 end)
 
@@ -102,6 +97,9 @@ hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "previous_per_monitor" }))
 
 hl.bind(mainMod .. " + grave", hl.dsp.workspace.toggle_special("magic"))
 hl.bind(mainMod .. " + SHIFT + grave", hl.dsp.window.move({ workspace = "special:magic" }))
+
+-- open Rofi in emoji mode
+hl.bind(mainMod .. " + PERIOD", hl.dsp.exec_cmd("rofi -show emoji"))
 
 -- Scroll through existing workspaces with mainMod + scroll
 

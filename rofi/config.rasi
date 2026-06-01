@@ -1,14 +1,15 @@
 configuration {
-    modes: [ drun, run, window ];
+    modes: [ drun, window, emoji ];
     font: "JetBrainsMono Nerd Font 12";
     show-icons: true;
     icon-theme: "Papirus";
     display-drun: "Apps";
-    display-run: "Run";
     display-window: "Window";
+    display-emoji: "Emoji";
     drun-display-format: "{icon} {name}";
 }
 
+/* Clear default theme settings completely */
 @theme "/dev/null"
 
 /* Catppuccin Mocha Color Palette */
@@ -87,7 +88,7 @@ element-text {
     background-color: transparent;
     text-color:       inherit;
     vertical-align:   0.5;
-    margin:           0px 0px 0px 10px; /* Moves text perfectly away from icon */
+    margin:           0px 0px 0px 10px;
 }
 
 element selected {
@@ -103,11 +104,11 @@ element selected element-text {
 /* --- Fixed Category Ribbon --- */
 mode-switcher {
     spacing:          10px;
-    margin:           10px 100px 15px 100px; /* Reduced to 100px so "Window" fits perfectly without cutting off */
+    margin:           10px 100px 15px 100px; /* Centered perfectly for 3 tabs */
 }
 
 button {
-    padding:          4px 12px; /* Increased side padding for a cleaner look */
+    padding:          4px 12px; 
     background-color: @bg-col-light;
     text-color:       @grey;
     vertical-align:   0.5; 
