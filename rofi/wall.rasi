@@ -1,0 +1,103 @@
+configuration {
+    kb-cancel: "Escape,Super_L";
+    show-icons: true;
+}
+
+@theme "/dev/null"
+
+* {
+    /* Catppuccin Mocha Color Palette */
+    bg-col:       #1e1e2e;
+    border-col:   #89b4fa;
+    selected-col: #313244;
+    blue:         #89b4fa;
+    fg-col:       #cdd6f4;
+    muted-fg:     #7f849c;
+
+    background-color: transparent;
+    text-color:       @fg-col;
+}
+
+window {
+    width:            780px;   
+    height:           540px;   
+    border:           2px;
+    border-color:     @border-col;
+    background-color: @bg-col;
+    border-radius:    12px;
+}
+
+mainbox {
+    background-color: @bg-col;
+    children:         [ inputbar, listview ];
+    spacing:          0px;
+}
+
+inputbar {
+    children:         [ prompt, entry ];
+    background-color: @bg-col;
+    padding:          20px 20px 10px 20px;
+}
+
+prompt {
+    background-color: @blue;
+    padding:          6px 12px; 
+    text-color:       #1e1e2e; 
+    border-radius:    6px;
+    font:             "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    padding:          6px;      
+    margin:           0px 0px 0px 10px;
+    text-color:       @fg-col;
+    placeholder:      "Search wallpapers...";
+    placeholder-color:@muted-fg;
+}
+
+listview {
+    border:           0px;
+    padding:          10px 20px 20px 20px;
+    columns:          3;
+    lines:            2;
+    spacing:          20px;
+    flow:             horizontal;
+    fixed-columns:    true;
+}
+
+element {
+    orientation:      vertical;
+    padding:          15px;
+    border-radius:    10px;
+    cursor:           pointer;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg-col;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg-col;
+}
+
+element selected.normal {
+    background-color: @selected-col;
+    text-color:       @blue;
+}
+
+element-icon {
+    size:             130px;    
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    cursor:           inherit;
+}
+
+element-text {
+    text-color:       inherit;
+    horizontal-align: 0.5;
+    vertical-align:   0.5;
+    margin:           12px 0px 0px 0px;
+    font:             "JetBrainsMono Nerd Font 10";
+}

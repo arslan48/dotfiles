@@ -88,6 +88,9 @@ hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "previous_per_monitor" }))
 
+-- Open wallpaper picker menu
+hl.bind("SUPER + W", hl.dsp.exec_cmd("/home/arslan/.config/rofi/scripts/wall-picker.sh"))
+
 -- Move current workspace to a monitor
 -- hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ monitor = "l" }))
 -- hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.move({ monitor = "r" }))

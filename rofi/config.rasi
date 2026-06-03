@@ -1,4 +1,5 @@
 configuration {
+    kb-cancel: "Escape,Super_L";
     modes: [ drun, window, emoji ];
     font: "JetBrainsMono Nerd Font 12";
     show-icons: true;
