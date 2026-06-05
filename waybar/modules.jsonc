@@ -53,8 +53,8 @@
         "format": " {load1}%",
         "cursor": true,
         "states": {
-            "warning": 70,
-            "critical": 90
+            "warning": 6.0,
+            "critical": 7.4
         }
     },
 
