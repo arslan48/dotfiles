@@ -119,48 +119,54 @@ WALL_DIR="$HOME/Downloads/CozyPixels/Catppuccin"
 Here are the primary hotkeys configured in [hypr/modules/binds.lua](file:///home/arslan/dotfiles/hypr/modules/binds.lua):
 
 ### Applications
-- `SUPER + Enter` ➔ Open Terminal (**Kitty**)
-- `SUPER + E` ➔ Open File Manager (**Dolphin**)
-- `SUPER + C` ➔ Open Application Launcher (**Rofi**)
-- `SUPER + B` ➔ Open Browser (**Brave**)
-- `SUPER + X` ➔ Open Text Editor (**VS Code**)
-- `SUPER + W` ➔ Open **Wallpaper Picker**
-- `SUPER + .` ➔ Open **Emoji Selector**
+
+| Keybind | Action |
+| :--- | :--- |
+| `SUPER + Enter` | Open Terminal (**Kitty**) |
+| `SUPER + E` | Open File Manager (**Dolphin**) |
+| `SUPER + C` | Open Application Launcher (**Rofi**) |
+| `SUPER + B` | Open Browser (**Brave**) |
+| `SUPER + X` | Open Text Editor (**VS Code**) |
+| `SUPER + W` | Open **Wallpaper Picker** |
+| `SUPER + .` | Open **Emoji Selector** |
 
 ### Window & Workspace Control
-- `SUPER + Shift + Q` ➔ Close active window
-- `SUPER + F` ➔ Toggle fullscreen
-- `SUPER + Space` ➔ Toggle floating state (auto-resizes and centers window)
-- `SUPER + V` ➔ Toggle dwindle split (`togglesplit`)
-- `SUPER + H/J/K/L` (or Arrow keys) ➔ Focus left/down/up/right
-- `SUPER + Shift + H/J/K/L` (or Arrow keys) ➔ Move active window left/down/up/right
-- `SUPER + U/I/O/P` ➔ Resize window (repeating keys)
-- `SUPER + [1-10]` ➔ Switch to workspace 1-10
-- `SUPER + Shift + [1-10]` ➔ Move active window to workspace 1-10
-- `SUPER + ~` (Grave key) ➔ Toggle Special Workspace (Scratchpad)
-- `SUPER + Shift + ~` ➔ Move active window to Special Workspace
-- `SUPER + S / A` ➔ Navigate to next / previous workspace
-- `SUPER + D` ➔ Switch to previous workspace per monitor
+
+| Keybind | Action |
+| :--- | :--- |
+| `SUPER + Shift + Q` | Close active window |
+| `SUPER + F` | Toggle fullscreen |
+| `SUPER + Space` | Toggle floating state (auto-resizes and centers window) |
+| `SUPER + V` | Toggle dwindle split (`togglesplit`) |
+| `SUPER + H/J/K/L` (or Arrow keys) | Focus left/down/up/right |
+| `SUPER + Shift + H/J/K/L` (or Arrow keys) | Move active window left/down/up/right |
+| `SUPER + U/I/O/P` | Resize window (repeating keys) |
+| `SUPER + [1-10]` | Switch to workspace 1-10 |
+| `SUPER + Shift + [1-10]` | Move active window to workspace 1-10 |
+| `SUPER + ~` (Grave key) | Toggle Special Workspace (Scratchpad) |
+| `SUPER + Shift + ~` | Move active window to Special Workspace |
+| `SUPER + S / A` | Navigate to next / previous workspace |
+| `SUPER + D` | Switch to previous workspace per monitor |
 
 ### Media & Volume
-- `Print` ➔ Screenshot selected area (saves to clipboard)
-- `Shift + Print` ➔ Screenshot entire screen (saves to clipboard)
-- `AudioRaiseVolume` / `AudioLowerVolume` ➔ Adjust system volume (using `wpctl`)
-- `AudioMute` ➔ Mute/unmute audio sink
-- `MonBrightnessUp` / `MonBrightnessDown` ➔ Adjust screen brightness (using `brightnessctl`)
-- `AudioNext` / `AudioPrev` / `AudioPlay` / `AudioPause` ➔ Media controls (using `playerctl`)
 
+| Keybind | Action |
+| :--- | :--- |
+| `Print` | Screenshot selected area (saves to clipboard) |
+| `Shift + Print` | Screenshot entire screen (saves to clipboard) |
+| `AudioRaiseVolume` / `AudioLowerVolume` | Adjust system volume (using `wpctl`) |
+| `AudioMute` | Mute/unmute audio sink |
+| `MonBrightnessUp` / `MonBrightnessDown` | Adjust screen brightness (using `brightnessctl`) |
+| `AudioNext` / `AudioPrev` / `AudioPlay` / `AudioPause` | Media controls (using `playerctl`) |
 ---
+## 🙏 Credits
 
-## 🔗 Custom Scripts & Integrations
+A huge thanks to the open-source community for making ricing possible and fun. Special credit goes to:
 
-Some Waybar widgets integrate custom scripts placed in `~/.local/bin/`. You can copy or write simple wrappers for these features:
-- `toggle_bluetooth` ➔ Toggles Bluetooth power state.
-- `refreshrate [rate]` ➔ Dynamically adjusts display refresh rates (e.g. `60`, `90`, `144`).
-- `caffeine` ➔ Prevents system sleep/suspension on lid close.
-- `powersafe` ➔ Switches to power-saving configuration profiles.
-
----
+| Author | Project | Contribution |
+| :--- | :--- | :--- |
+| [**cebem1nt**](https://github.com/cebem1nt/dotfiles) | `cebem1nt/dotfiles` | Base Waybar layout and sliding drawer concept — heavily customized and adapted for this setup |
+| [**ayanrajpoot10**](https://github.com/ayanrajpoot10/dotfiles) | `ayanrajpoot10/dotfiles` | Base Fastfetch configuration — customized to match the Catppuccin Mocha theme |
 
 ## 📄 License
 
