@@ -81,22 +81,25 @@ sudo pacman -S hyprland kitty waybar rofi swaync fastfetch btop cava pipewire wi
 yay -S awww-git peaclock-git mission-center nwg-look-bin kvantum ttf-jetbrains-mono-nerd rofi-emoji
 ```
 
-### Step 3: Symlink Configurations
-Backup your current config directory if needed, and create symlinks from the repository to your local `~/.config/`:
+### Step 3: Copy Configurations
 
 ```bash
-# Create target config folder if it doesn't exist
+# 1. (Optional) Backup your existing configuration directory
+mv ~/.config ~/.config.bak
+
+# 2. Create the target config folder if it doesn't exist
 mkdir -p ~/.config
 
-# Symlink configurations
-ln -sf ~/dotfiles/hypr ~/.config/hypr
-ln -sf ~/dotfiles/kitty ~/.config/kitty
-ln -sf ~/dotfiles/waybar ~/.config/waybar
-ln -sf ~/dotfiles/rofi ~/.config/rofi
-ln -sf ~/dotfiles/fastfetch ~/.config/fastfetch
-ln -sf ~/dotfiles/cava ~/.config/cava
-ln -sf ~/dotfiles/btop ~/.config/btop
+# 3. Copy configurations recursively from the repository
+cp -r ~/dotfiles/hypr ~/.config/
+cp -r ~/dotfiles/kitty ~/.config/
+cp -r ~/dotfiles/waybar ~/.config/
+cp -r ~/dotfiles/rofi ~/.config/
+cp -r ~/dotfiles/fastfetch ~/.config/
+cp -r ~/dotfiles/cava ~/.config/
+cp -r ~/dotfiles/btop ~/.config/
 ```
+
 
 ### Step 4: Configure Wallpapers
 The custom **wallpaper picker** (`SUPER + W`) searches for wallpapers in:
