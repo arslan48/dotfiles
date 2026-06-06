@@ -94,7 +94,7 @@ A huge thanks to the open-source community for making ricing possible and fun. S
 
 | Author | Project | Contribution |
 | :--- | :--- | :--- |
-| [**cebem1nt**](https://github.com/cebem1nt/dotfiles) | `cebem1nt/dotfiles` | Base Waybar layout and sliding drawer concept — heavily customized and adapted for this setup |
+| [**cebem1nt**](https://github.com/cebem1nt/dotfiles) | `cebem1nt/dotfiles` | Base Waybar layout from cebem1nt/dotfiles — customized with colors, module tweaks, and fixes to fit this setup |
 | [**ayanrajpoot10**](https://github.com/ayanrajpoot10/dotfiles) | `ayanrajpoot10/dotfiles` | Base Fastfetch configuration — customized to match the Catppuccin Mocha theme |
 | [**Catppuccin**](https://github.com/catppuccin/catppuccin) | `catppuccin/catppuccin` | Beautiful pastel color palette used throughout this setup (Mocha variant) |
 | [**Hyprland**](https://github.com/hyprwm/Hyprland) | `hyprwm/Hyprland` | Amazing Wayland compositor that powers this setup |
