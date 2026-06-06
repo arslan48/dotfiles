@@ -1,9 +1,5 @@
 # arslan dotfiles
 
-<p align="center">
-  <img src="assets/banner.svg" alt="arslan dotfiles" width="600" />
-</p>
-
 This repository contains all of my personal dotfiles.
 
 ---
@@ -17,6 +13,7 @@ This repository includes configuration for:
 - **Notification:** SwayNC
 - **Launcher:** Rofi
 - **Audio Visualizer:** Cava
+- **System Information:** Fastfetch
 
 ---
 
@@ -73,8 +70,13 @@ This repository includes configuration for:
 
 ---
 
-## 🤝 Credits
+## 🙏 Credits
 
-- Special thanks to the creators of [Hyprland](https://github.com/hyprwm/Hyprland) for the amazing Wayland compositor.
-- Theme inspired by [Catppuccin](https://github.com/catppuccin/catppuccin) (Mocha style).
-- Thanks to all package developers and the Linux customization community!
+A huge thanks to the open-source community for making ricing possible and fun. Special credit goes to:
+
+| Author | Project | Contribution |
+| :--- | :--- | :--- |
+| [**cebem1nt**](https://github.com/cebem1nt/dotfiles) | `cebem1nt/dotfiles` | Base Waybar layout and sliding drawer concept — heavily customized and adapted for this setup |
+| [**ayanrajpoot10**](https://github.com/ayanrajpoot10/dotfiles) | `ayanrajpoot10/dotfiles` | Base Fastfetch configuration — customized to match the Catppuccin Mocha theme |
+| [**Catppuccin**](https://github.com/catppuccin/catppuccin) | `catppuccin/catppuccin` | Beautiful pastel color palette used throughout this setup (Mocha variant) |
+| [**Hyprland**](https://github.com/hyprwm/Hyprland) | `hyprwm/Hyprland` | Amazing Wayland compositor that powers this setup |
