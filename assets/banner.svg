@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 120" width="100%" height="120">
+  <style>
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .cursor {
+      animation: blink 0.8s infinite;
+      fill: #f5c2e7;
+    }
+    .text {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 36px;
+      font-weight: bold;
+      fill: #cdd6f4;
+    }
+    .accent {
+      fill: #89b4fa;
+    }
+  </style>
+  <rect width="100%" height="100%" rx="15" fill="#181825" stroke="#313244" stroke-width="2"/>
+  
+  <g transform="translate(45, 70)">
+    <!-- Terminal Prompt Icon -->
+    <text x="0" y="0" class="text accent">&gt;_</text>
+    
+    <!-- Typing Text -->
+    <g transform="translate(60, 0)">
+      <clipPath id="clip">
+        <rect x="0" y="-40" width="0" height="60">
+          <animate attributeName="width" 
+                   values="0; 330; 330; 0" 
+                   keyTimes="0; 0.5; 0.9; 1" 
+                   dur="4s" 
+                   repeatCount="indefinite" />
+        </rect>
+      </clipPath>
+      <text x="0" y="0" class="text" clip-path="url(#clip)">arslan dotfiles</text>
+      
+      <!-- Animated Cursor -->
+      <g>
+        <rect x="0" y="-32" width="12" height="36" class="cursor" />
+        <animateTransform 
+          attributeName="transform"
+          type="translate"
+          values="0,0; 330,0; 330,0; 0,0"
+          keyTimes="0; 0.5; 0.9; 1"
+          dur="4s"
+          repeatCount="indefinite" />
+      </g>
+    </g>
+  </g>
+</svg>
