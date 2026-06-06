@@ -19,53 +19,71 @@ This repository includes configuration for:
 
 ## 📂 File Structure
 
+### Hyprland
 ```text
-.
-├── btop/
-│   └── themes/
-│       └── catppuccin_mocha.theme
-├── cava/
-│   └── config
-├── fastfetch/
-│   ├── config.jsonc
-│   └── marin.png
-├── hypr/
-│   ├── hyprland.lua
-│   ├── modules/
-│   │   ├── autostart.lua
-│   │   ├── binds.lua
-│   │   ├── decorations.lua
-│   │   ├── env.lua
-│   │   ├── input.lua
-│   │   ├── layout.lua
-│   │   ├── misc.lua
-│   │   ├── monitors.lua
-│   │   └── windowsrules.lua
-│   └── themes/
-│       └── catppuccin-mocha.lua
-├── kitty/
-│   ├── current-theme.conf
-│   └── kitty.conf
-├── rofi/
-│   ├── config.rasi
-│   ├── scripts/
-│   │   └── wall-picker.sh
-│   ├── theme.rasi
-│   ├── wall-picker.sh
-│   └── wall.rasi
-└── waybar/
-    ├── colors/
-    │   ├── colors.css -> colors.dark.css
-    │   ├── colors.dark.css
-    │   └── colors.light.css
-    ├── config.jsonc
-    ├── context/
-    │   ├── ctlcenter.xml
-    │   └── network.xml
-    ├── modules.jsonc
-    ├── scripts/
-    │   └── launch.sh
-    └── style.css
+hypr/
+├── hyprland.lua
+└── modules/
+    ├── autostart.lua
+    ├── binds.lua
+    ├── decorations.lua
+    ├── env.lua
+    ├── input.lua
+    ├── layout.lua
+    ├── misc.lua
+    ├── monitors.lua
+    └── windowsrules.lua
+└── themes/
+    └── catppuccin-mocha.lua
+```
+
+### Waybar
+```text
+waybar/
+├── colors/
+│   ├── colors.css -> colors.dark.css
+│   ├── colors.dark.css
+│   └── colors.light.css
+├── config.jsonc
+├── context/
+│   ├── ctlcenter.xml
+│   └── network.xml
+├── modules.jsonc
+├── scripts/
+│   └── launch.sh
+└── style.css
+```
+
+### Rofi
+```text
+rofi/
+├── config.rasi
+├── scripts/
+│   └── wall-picker.sh
+├── theme.rasi
+├── wall-picker.sh
+└── wall.rasi
+```
+
+### Terminal & Shell
+```text
+kitty/
+├── current-theme.conf
+└── kitty.conf
+```
+
+### System Tools
+```text
+btop/
+└── themes/
+    └── catppuccin_mocha.theme
+
+cava/
+└── config
+
+fastfetch/
+├── config.jsonc
+└── marin.png
 ```
 
 ---
