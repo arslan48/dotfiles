@@ -1,32 +1,30 @@
----------------------
----- MY PROGRAMS ----
----------------------
+-- ██████╗ ██╗███╗   ██╗██████╗ ███████╗
+-- ██╔══██╗██║████╗  ██║██╔══██╗██╔════╝
+-- ██████╔╝██║██╔██╗ ██║██║  ██║███████╗
+-- ██╔══██╗██║██║╚██╗██║██║  ██║╚════██║
+-- ██████╔╝██║██║ ╚████║██████╔╝███████║
+-- ╚═════╝ ╚═╝╚═╝  ╚═══╝╚═════╝ ╚══════╝
 
--- Set programs that you use
 local terminal    = "kitty"
 local fileManager = "dolphin"
 local menu        = "rofi -show drun"
 local browser     = "brave"
 local editor      = "code"
 
----------------------
----- KEYBINDINGS ----
----------------------
 
-local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local mainMod = "SUPER" 
 
 hl.bind(mainMod .. " + RETURN", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + C", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + SHIFT + E", hl.dsp.exec_cmd("hyprctl dispatch exit"))
-hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
+hl.bind("SUPER + W", hl.dsp.exec_cmd("/home/arslan/.config/rofi/scripts/wall-picker.sh"))
+hl.bind("SUPER + R", hl.dsp.exec_cmd("/home/arslan/.config/waybar/scripts/launch.sh"))
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.exit())
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(editor))
 
--- Focus windows with HJKL and arrow keys
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
@@ -37,7 +35,6 @@ hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 
--- Move windows with HJKL and arrow keys
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
@@ -50,7 +47,7 @@ hl.bind(mainMod .. " + SHIFT + down", hl.dsp.window.move({ direction = "down" })
 
 -- Resize windows
 
-local resizeStep = 40
+local resizeStep = 30
 
 hl.bind(mainMod .. " + U", 
     hl.dsp.window.resize({ x = -resizeStep, y = 0, relative = true }), { repeating = true })
@@ -69,14 +66,12 @@ hl.bind(mainMod .. " + V", hl.dsp.layout("togglesplit"))
 
 hl.bind(mainMod .. " + SPACE", function()
     hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
-    hl.dispatch(hl.dsp.window.resize({ x = 1000, y = 700, relative = false }))
+    hl.dispatch(hl.dsp.window.resize({ x = 800, y = 490, relative = false }))
     hl.dispatch(hl.dsp.window.center())
 end)
 
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
 for i = 1, 10 do
     local key = i % 10 -- 10 maps to key 0
     hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
@@ -88,8 +83,7 @@ hl.bind(mainMod .. " + S", hl.dsp.focus({ workspace = "e+1" }))
 hl.bind(mainMod .. " + A", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + D", hl.dsp.focus({ workspace = "previous_per_monitor" }))
 
--- Open wallpaper picker menu
-hl.bind("SUPER + W", hl.dsp.exec_cmd("/home/arslan/.config/rofi/scripts/wall-picker.sh"))
+
 
 -- Move current workspace to a monitor
 -- hl.bind(mainMod .. " + SHIFT + A", hl.dsp.window.move({ monitor = "l" }))
