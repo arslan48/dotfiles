@@ -1,0 +1,22 @@
+
+[
+  {
+    "context": "Workspace",
+    "bindings": {}
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": [
+        "vim::SwitchMode",
+        "Normal"
+      ]
+    }
+  },
+  {
+    "context": "vim_mode == replace",
+    "unbind": {
+      "escape": "vim::NormalBefore"
+    }
+  }
+]

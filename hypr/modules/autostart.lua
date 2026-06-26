@@ -6,7 +6,8 @@
 -- ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚═╝
 
 hl.on("hyprland.start", function()
-    hl.exec_cmd("sleep 1 && waybar")
-    hl.exec_cmd("swaync")
-    hl.exec_cmd("awww-daemon") 
+	hl.exec_cmd("sleep 1 && waybar")
+	hl.exec_cmd("swaync")
+	hl.exec_cmd("awww-daemon")
+	hl.exec_cmd("/usr/lib/xdg-desktop-portal -r")
 end)

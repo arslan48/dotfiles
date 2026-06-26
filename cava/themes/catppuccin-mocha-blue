@@ -1,0 +1,12 @@
+[color]
+background = '#1e1e2e'
+foreground = '#cdd6f4'
+
+gradient = 1
+gradient_color_1 = '#313244' # Dark Surface (Bottom)
+gradient_color_2 = '#585b70' # Muted Blue Overlay
+gradient_color_3 = '#74c7ec' # Sapphire Blue
+gradient_color_4 = '#89b4fa' # Deep Blue (Top)
+
+horizontal_gradient = 0
+blend_direction = 'up'

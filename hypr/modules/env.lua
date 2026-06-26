@@ -7,6 +7,8 @@
 
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("XCURSOR_THEME", "Simp1e-Catppuccin-Mocha")
+hl.env("HYPRCURSOR_THEME", "Simp1e-Catppuccin-Mocha")
 
 -- toolkit Backend VARIABLES
 

@@ -1,0 +1,13 @@
+[color]
+background = '#1e1e2e'
+foreground = '#cdd6f4'
+
+gradient = 1
+gradient_color_1 = '#313244' # Dark Surface (Bottom)
+gradient_color_2 = '#eba0ac' # Maroon
+gradient_color_3 = '#dc8a78' # Rosewater
+gradient_color_4 = '#f9e2af' # Yellow / Gold
+gradient_color_5 = '#fab387' # Peach (Top Peak)
+
+horizontal_gradient = 0
+blend_direction = 'up'

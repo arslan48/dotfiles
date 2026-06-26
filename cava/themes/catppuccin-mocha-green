@@ -1,0 +1,12 @@
+[color]
+background = '#1e1e2e'
+foreground = '#cdd6f4'
+
+gradient = 1
+gradient_color_1 = '#313244' # Dark Surface (Bottom)
+gradient_color_2 = '#585b70' # Muted Green Overlay
+gradient_color_3 = '#94e2d5' # Teal
+gradient_color_4 = '#a6e3a1' # Bright Green (Top)
+
+horizontal_gradient = 0
+blend_direction = 'up'

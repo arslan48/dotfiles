@@ -100,16 +100,17 @@
 
 #memory,
 #cpu,
+#load,
 #temperature {
     color: @green;
 }
 
 #network {
-    color: @teal;       
+    color: @blue;       
 }
 
 #bluetooth {
-    color: @teal;       
+    color: @blue;       
 }
 
 #backlight {
@@ -144,6 +145,7 @@
 #network.disabled,
 #temperature.critical, 
 #network.disconnected,
+#load.critical,
 #power-profiles-daemon.performance {
     color: @red;
 }
@@ -152,6 +154,7 @@
 #cpu.warning,
 #memory.warning, 
 #battery.warning,
+#load.warning,
 #temperature.warning {
     color: @yellow;
     background: unset;
@@ -183,7 +186,10 @@
 
 #workspaces button:hover {
     background: transparent;
+    box-shadow: none;
+    color: @blue; 
 }
+
 
 #mpris.paused {
     color: @inactive;
